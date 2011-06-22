@@ -1,0 +1,36 @@
+gae-flat-web
+
+Gogle AppEngine is providing free {of charge and ads} PaaS to host your own website.
+
+it's a small project for Web Developers who want to host their Flat Content i.e. 
+Static Web Portal just consisting of HTML, CSS, JS, Images and other stuff 
+just required to be served to users.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Pre-requisite: Python >= v2.5
+
+~~~~~ HOW TO USE ~~~~~
+
+#git clone git://github.com/abhishekkr/gae-flat-web.git
+
+#cd gae-flat-web
+
+#python flat.py $GAE_APPLICATION_NAME
+
+#cp -r $MY_STATIC_CONTENT_DIR/* $GAE_APPLICATION_NAME/flat_web/
+
+now, you can update the created dir $GAE_APPLICATION_NAME to AppEngine,
+by executing following command from downloaded AppEngine's Python SDK
+
+#python appcfg.py update $PATH_TO{$GAE_APPLICATION_NAME}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+AbhishekKr ~ ABK ~ aBionic
+
+http://www.twitter.com/aBionic
+
+http://github.com/abhishekkr
+
+http://abhishekkr.wordpress.com

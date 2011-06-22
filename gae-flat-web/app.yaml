@@ -1,0 +1,11 @@
+application: gae-flat-web
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /flat_web
+  static_dir: flat_web/
+
+- url: /
+  script: main.py
