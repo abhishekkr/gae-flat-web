@@ -26,6 +26,6 @@ def gen_main_py(fyl_path):
   create_file(fyl_path, gae_gen_txt.txt_main_py())
 
 def gen_flat_root(fyl_path, app_name):
-  fyl_path = os.path.join(fyl_path,"index.yaml")
+  fyl_path = os.path.join(fyl_path,"index.htm")
   create_file(fyl_path, gae_gen_txt.txt_flat_root(app_name))
 
