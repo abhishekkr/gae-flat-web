@@ -1,1 +1,75 @@
-<html><body><h1>Told Ya ;)</h1></body></html>
+<html>
+  <head>
+  	<title>gae-flat-web</title>
+	<link href='http://fonts.googleapis.com/css?family=Artifika&v1' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu&v1' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  	<h1  style="padding:5px; background:url('bgtop.jpg'); background-color:black; color:lightgreen; cursor:pointer; font-family:'Artifika',arial,serif;" onclick="window.open('https://github.com/abhishekkr/gae-flat-web');">gae-flat-web</h1>
+	<div style="margin:auto;width:90%">
+		<h3>Your own Static Content Website served by Google AppEngine</h3>
+		<span style="font-family: 'Ubuntu', arial, serif;">GitHub Repository:</span>
+		<ul>
+			<li><a href="https://github.com/abhishekkr/gae-flat-web">
+				https://github.com/abhishekkr/gae-flat-web
+			</a></li>
+		</ul>
+		<div style="height:30%; width: 90%; overflow:scroll; border:dotted; background-color:black; color:lightgreen; padding:1em;">
+<b>gae-flat-web</b><br/>
+<br/><div style="font-family: 'Ubuntu', arial, serif;">
+Gogle AppEngine is providing free {of charge and ads} PaaS to host your own website.<br/>
+<br/>
+it's a small project for Web Developers who want to host their Flat Content i.e. 
+Static Web Portal just consisting of HTML, CSS, JS, Images and other stuff 
+just required to be served to users.</div><br/>
+<br/>
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br/>
+<br/>
+Pre-requisite: Python >= v2.5<br/>
+<br/>
+~~~~~ HOW TO USE ~~~~~<br/>
+<br/>
+#git clone git://github.com/abhishekkr/gae-flat-web.git<br/>
+<br/>
+#cd gae-flat-web<br/>
+<br/>
+#python flat.py $GAE_APPLICATION_NAME<br/>
+<br/>
+#cp -r $MY_STATIC_CONTENT_DIR/* $GAE_APPLICATION_NAME/flat_web/<br/>
+<br/>
+<span style="font-family: 'Ubuntu', arial, serif;">now, you can update the created dir $GAE_APPLICATION_NAME to AppEngine,
+by executing following command from downloaded AppEngine's Python SDK</span>
+<br/>
+#python appcfg.py update $PATH_TO{$GAE_APPLICATION_NAME}<br/>
+<br/>
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-<br/>
+<br/>
+<span style="font-family: 'Ubuntu', arial, serif;">AbhishekKr ~ ABK ~ aBionic</span><br/>
+<br/>
+<a href="http://www.twitter.com/aBionic">http://www.twitter.com/aBionic</a><br/>
+<br/>
+<a href="http://github.com/abhishekkr">http://github.com/abhishekkr</a><br/>
+<br/>
+<a href="http://abhishekkr.wordpress.com">http://abhishekkr.wordpress.com</a><br/>
+		</div><br/>
+		<span style="font-family: 'Ubuntu', arial, serif;">Download:</span>
+		<ul>
+			<li><a href="/flat_web/flat.py">
+				'flat.py' ~ <span style="font-family: 'Ubuntu', arial, serif;">the script to generate entire structure</span>
+			</a></li><br/>
+			<li><a href="/flat_web/git-gae-flat-web.tar.gz">
+				'git-gae-flat-web.tar.gz' ~ <span style="font-family: 'Ubuntu', arial, serif;">latest tarball of entire project from GitHub</span>
+			</a></li>
+		</ul>
+	</div>
+	<h5 stylw="float:bottom; margin-bottom:5px;">
+		<span style="font-family: 'Ubuntu', arial, serif;">created by using </span>
+		<a href="https://github.com/abhishekkr/gae-flat-web">
+			https://github.com/abhishekkr/gae-flat-web
+		</a> 
+		<span style="float:right; font-weight:200; font-family:'Artifika',arial,serif;">
+			[using GoogleWebFonts:Artifika,Ubuntu]
+		</span>
+	</h5>
+  </body>
+</html>

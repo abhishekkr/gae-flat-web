@@ -15,8 +15,8 @@ class MainHandler(webapp.RequestHandler):
 def main():
   application = webapp.WSGIApplication(
     [
-	  ('/', MainHandler),
-	], debug=True)
+          ('/', MainHandler),
+        ], debug=True)
   util.run_wsgi_app(application)
 
 
