@@ -1,0 +1,66 @@
+# Build spec for n00bhacker
+#
+#
+
+Name: gae-flat-web
+Version: 0.0.1
+Release: 1
+Summary: to use Google AppEngine for static website serving
+Group: OpenChaos
+License: DemocraticOpenSource
+Vendor: ABK
+
+%define label 0.0.1
+%define source git://github.com/abhishekkr/gae-flat-web.git
+
+BuildRoot: %{_tmppath}/%{name}-%{label}-%{release}-root-%(%{__id_u} -n)
+#BuildArch: x86_64
+
+# disable automatic Requires and Provides detection, so multiple
+# Rails apps using similar gems (such as nokogiri) can be installed
+AutoReq: no
+AutoProv: no
+
+Provides: %{name}
+
+Requires: python
+
+# basic ruby dev environment
+BuildRequires: git
+
+%description
+a Remote Administration Toolkit (or Trojan) for POSiX (Linux/Unix) system working as a HTTP Service
+
+%define appsroot %{buildroot}/opt
+
+%prep
+
+rm -rf ./%{name}
+git clone %{source} %{name}
+pushd %{name}
+  #git reset --hard %{revision}
+
+  # put version.txt in public: it's used by the /health_check URL
+  echo %{label} > version.txt
+popd
+
+%clean
+rm -rf %{buildroot}
+
+%install
+rm -rf %{buildroot}
+mkdir -p %{appsroot}
+mv %{name} %{appsroot}
+pushd %{appsroot}
+  # remove unnecessary files from binary package
+  rm -rf %{name}/.git
+popd
+
+%post
+rm -f /usr/bin/gaeflat
+ln -sf /opt/%{name}/flat.py /usr/bin/gaeflat
+chmod 0755 /usr/bin/gaeflat
+
+%files
+#%defattr(-,root,root,-)
+/opt/%{name}
