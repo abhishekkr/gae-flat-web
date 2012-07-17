@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """[flat.py]
 this will create the structure for a new Google AppEngine suitable
 to act as a Flat Web with the GAE Application Name provided as parameter
