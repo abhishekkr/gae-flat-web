@@ -61,6 +61,9 @@ rm -f /usr/bin/gaeflat
 ln -sf /opt/%{name}/flat.py /usr/bin/gaeflat
 chmod 0755 /usr/bin/gaeflat
 
+%postun
+rm -f /usr/bin/gaeflat
+
 %files
 #%defattr(-,root,root,-)
 /opt/%{name}
